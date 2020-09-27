@@ -27,7 +27,7 @@ def do_search() -> 'html':
     phrase=request.form['phrase']
     letters=request.form['letters']
     results = str(search4letters(phrase, letters))
-    title = 'Here are you results:'
+    title = 'Вот ваш результат:'
     log_request(request, results)
     return render_template('results.html', the_title=title, the_phrase = phrase, the_letters = letters, the_results = results,)
 
